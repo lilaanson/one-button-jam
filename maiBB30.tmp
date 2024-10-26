@@ -1,0 +1,307 @@
+[gd_scene load_steps=28 format=3 uid="uid://caqhkw2eodyim"]
+
+[ext_resource type="PackedScene" uid="uid://c8xwvnnlyd6pp" path="res://characters scenes/one.tscn" id="1_28yqd"]
+[ext_resource type="Script" path="res://main.gd" id="1_m0bnf"]
+[ext_resource type="Texture2D" uid="uid://dteu0ndbaj7de" path="res://environment/sunrise3.jpg" id="2_1vlvt"]
+[ext_resource type="Texture2D" uid="uid://c7nkchx4w2k2" path="res://environment/background.jpg" id="2_gd0r8"]
+[ext_resource type="Texture2D" uid="uid://cx1oe8mgehpi1" path="res://environment/Asset 1.png" id="3_0do74"]
+[ext_resource type="PackedScene" uid="uid://bc7y77sdye3yr" path="res://characters scenes/two.tscn" id="3_ros05"]
+[ext_resource type="PackedScene" uid="uid://b7vykw0bsxij7" path="res://characters scenes/three.tscn" id="4_1llru"]
+[ext_resource type="Texture2D" uid="uid://bsxxj2awslrki" path="res://environment/title1.png" id="4_87x7l"]
+[ext_resource type="PackedScene" uid="uid://ioxop53bknyj" path="res://characters scenes/four.tscn" id="5_7x5tk"]
+[ext_resource type="Texture2D" uid="uid://nqcrjlsj6jdk" path="res://environment/title2.png" id="5_qmbbb"]
+[ext_resource type="PackedScene" uid="uid://rllurfywte57" path="res://characters scenes/five.tscn" id="6_x4ehm"]
+[ext_resource type="PackedScene" uid="uid://dktswyebtp8ux" path="res://characters scenes/six.tscn" id="9_2apb0"]
+[ext_resource type="FontFile" uid="uid://cr17tu2dd202c" path="res://environment/Goodland Variable.ttf" id="9_3uxqw"]
+[ext_resource type="Texture2D" uid="uid://bmh7e2vn0xxkq" path="res://environment/vecteezy_gradient-blur-background_20911345.png" id="9_jsw42"]
+[ext_resource type="PackedScene" uid="uid://b4jaljf1pyje1" path="res://characters scenes/seven.tscn" id="10_8b5d0"]
+[ext_resource type="Texture2D" uid="uid://cv3bd6we61kf2" path="res://environment/vecteezy_gradient-blur-background_20911489.png" id="10_k1xy3"]
+[ext_resource type="PackedScene" uid="uid://xyeodgdkeseh" path="res://characters scenes/eight.tscn" id="11_cf4q8"]
+[ext_resource type="PackedScene" uid="uid://dtqeufkw72xjl" path="res://characters scenes/nine.tscn" id="12_ybmyj"]
+[ext_resource type="PackedScene" uid="uid://ci36awfbrfq0y" path="res://characters scenes/ten.tscn" id="13_yn0go"]
+[ext_resource type="PackedScene" uid="uid://de2kdla8phjqi" path="res://characters scenes/eleven.tscn" id="14_6r0pp"]
+[ext_resource type="PackedScene" uid="uid://oi2pu3lhigow" path="res://characters scenes/twelve.tscn" id="15_s66i7"]
+[ext_resource type="PackedScene" uid="uid://3nc41bj82pxy" path="res://characters scenes/thirteen.tscn" id="16_ygcjj"]
+[ext_resource type="PackedScene" uid="uid://b1ccswlpef2h0" path="res://characters scenes/fourteen.tscn" id="17_bsunf"]
+[ext_resource type="PackedScene" uid="uid://c4kkyyucykc43" path="res://characters scenes/fifteen.tscn" id="18_8wy2w"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_jcg5i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fuup5"]
+bg_color = Color(0.769985, 0.529427, 0.501642, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3osm6"]
+bg_color = Color(0.148595, 0.0722624, 0.0643718, 1)
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_m0bnf")
+
+[node name="sunrise" type="TextureRect" parent="."]
+offset_right = 1149.0
+offset_bottom = 1174.0
+texture = ExtResource("2_1vlvt")
+
+[node name="background" type="TextureRect" parent="."]
+offset_left = -1.0
+offset_top = 112.0
+offset_right = 1153.0
+offset_bottom = 776.0
+texture = ExtResource("3_0do74")
+
+[node name="darken" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 0.556863)
+offset_right = 1149.0
+offset_bottom = 1174.0
+texture = SubResource("CanvasTexture_jcg5i")
+
+[node name="people" type="Node" parent="."]
+
+[node name="one" parent="people" instance=ExtResource("1_28yqd")]
+position = Vector2(555, 315)
+
+[node name="two" parent="people" instance=ExtResource("3_ros05")]
+position = Vector2(555, 315)
+
+[node name="three" parent="people" instance=ExtResource("4_1llru")]
+position = Vector2(555, 315)
+
+[node name="four" parent="people" instance=ExtResource("5_7x5tk")]
+
+[node name="five" parent="people" instance=ExtResource("6_x4ehm")]
+
+[node name="six" parent="people" instance=ExtResource("9_2apb0")]
+
+[node name="seven" parent="people" instance=ExtResource("10_8b5d0")]
+
+[node name="eight" parent="people" instance=ExtResource("11_cf4q8")]
+
+[node name="nine" parent="people" instance=ExtResource("12_ybmyj")]
+
+[node name="ten" parent="people" instance=ExtResource("13_yn0go")]
+
+[node name="eleven" parent="people" instance=ExtResource("14_6r0pp")]
+
+[node name="twelve" parent="people" instance=ExtResource("15_s66i7")]
+
+[node name="thirteen" parent="people" instance=ExtResource("16_ygcjj")]
+
+[node name="fourteen" parent="people" instance=ExtResource("17_bsunf")]
+
+[node name="fifteen" parent="people" instance=ExtResource("18_8wy2w")]
+
+[node name="ui" type="CanvasLayer" parent="."]
+
+[node name="rejectionBar" type="ProgressBar" parent="ui"]
+offset_left = 430.0
+offset_top = 38.0
+offset_right = 669.0
+offset_bottom = 54.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_fuup5")
+max_value = 550.0
+step = 1.0
+show_percentage = false
+
+[node name="rejecting" type="RichTextLabel" parent="ui"]
+offset_left = 483.0
+offset_top = 3.0
+offset_right = 643.0
+offset_bottom = 54.0
+theme_override_fonts/normal_font = ExtResource("9_3uxqw")
+theme_override_font_sizes/normal_font_size = 35
+text = "rejecting..."
+
+[node name="pop" type="RichTextLabel" parent="ui"]
+offset_left = 889.0
+offset_top = 6.0
+offset_right = 1143.0
+offset_bottom = 57.0
+theme_override_fonts/normal_font = ExtResource("9_3uxqw")
+theme_override_font_sizes/normal_font_size = 35
+text = "popularity: ++"
+
+[node name="capacity" type="RichTextLabel" parent="ui"]
+offset_left = 910.0
+offset_top = 49.0
+offset_right = 1164.0
+offset_bottom = 100.0
+theme_override_fonts/normal_font = ExtResource("9_3uxqw")
+theme_override_font_sizes/normal_font_size = 35
+text = "capacity: 0/25"
+
+[node name="pulse1" type="TextureRect" parent="ui"]
+offset_left = -243.442
+offset_top = 4.00001
+offset_right = 1804.56
+offset_bottom = 2052.0
+rotation = 0.490438
+scale = Vector2(0.270111, 0.270111)
+texture = ExtResource("9_jsw42")
+
+[node name="pulse2" type="TextureRect" parent="ui"]
+offset_left = -372.442
+offset_top = -26.0
+offset_right = 1675.56
+offset_bottom = 2022.0
+rotation = 0.174533
+scale = Vector2(0.331879, 0.331879)
+texture = ExtResource("10_k1xy3")
+
+[node name="menu" type="Node" parent="."]
+
+[node name="menuBackground" type="TextureRect" parent="menu"]
+offset_left = -286.0
+offset_right = 1202.0
+offset_bottom = 1488.0
+texture = ExtResource("2_gd0r8")
+
+[node name="title1" type="TextureRect" parent="menu"]
+offset_left = 291.0
+offset_top = 24.0
+offset_right = 859.0
+offset_bottom = 362.0
+texture = ExtResource("4_87x7l")
+
+[node name="title2" type="TextureRect" parent="menu"]
+offset_left = 291.0
+offset_top = 24.0
+offset_right = 859.0
+offset_bottom = 362.0
+texture = ExtResource("5_qmbbb")
+
+[node name="menuBar" type="ProgressBar" parent="menu"]
+offset_left = 441.0
+offset_top = 482.0
+offset_right = 680.0
+offset_bottom = 498.0
+theme_override_styles/background = SubResource("StyleBoxFlat_3osm6")
+theme_override_styles/fill = SubResource("StyleBoxFlat_fuup5")
+max_value = 550.0
+step = 1.0
+show_percentage = false
+
+[node name="clockIn" type="RichTextLabel" parent="menu"]
+offset_left = 482.0
+offset_top = 444.0
+offset_right = 657.0
+offset_bottom = 482.0
+theme_override_fonts/normal_font = ExtResource("9_3uxqw")
+theme_override_font_sizes/normal_font_size = 35
+text = "clock in (w)"
+
+[node name="transition" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+z_index = 1000
+offset_left = -11.0
+offset_top = -19.0
+offset_right = 1138.0
+offset_bottom = 1155.0
+scale = Vector2(1.03438, 0.638697)
+texture = SubResource("CanvasTexture_jcg5i")
+
+[node name="ending" type="Node" parent="."]
+
+[node name="club" type="RichTextLabel" parent="ending"]
+modulate = Color(0.894118, 0.317647, 0.356863, 1)
+z_index = 500
+offset_left = 355.0
+offset_top = 50.0
+offset_right = 810.0
+offset_bottom = 295.0
+theme_override_fonts/normal_font = ExtResource("9_3uxqw")
+theme_override_font_sizes/normal_font_size = 210
+text = "CLUB"
+
+[node name="closed" type="RichTextLabel" parent="ending"]
+modulate = Color(0.894118, 0.317647, 0.356863, 1)
+z_index = 4096
+offset_left = 256.0
+offset_top = 224.0
+offset_right = 924.0
+offset_bottom = 474.0
+theme_override_fonts/normal_font = ExtResource("9_3uxqw")
+theme_override_font_sizes/normal_font_size = 210
+text = "CLOSED"
+
+[node name="rating" type="RichTextLabel" parent="ending"]
+z_index = 4096
+offset_left = 530.0
+offset_top = 422.0
+offset_right = 758.0
+offset_bottom = 552.0
+theme_override_fonts/normal_font = ExtResource("9_3uxqw")
+theme_override_font_sizes/normal_font_size = 120
+text = "B"
+
+[node name="performance" type="RichTextLabel" parent="ending"]
+z_index = 998
+offset_left = 241.0
+offset_top = 454.0
+offset_right = 536.0
+offset_bottom = 505.0
+theme_override_fonts/normal_font = ExtResource("9_3uxqw")
+theme_override_font_sizes/normal_font_size = 35
+text = "performance rating:"
+
+[node name="popReview" type="RichTextLabel" parent="ending"]
+z_index = 998
+offset_left = 677.0
+offset_top = 454.0
+offset_right = 972.0
+offset_bottom = 505.0
+theme_override_fonts/normal_font = ExtResource("9_3uxqw")
+theme_override_font_sizes/normal_font_size = 35
+text = "+ high popularity"
+
+[node name="capReview" type="RichTextLabel" parent="ending"]
+z_index = 998
+offset_left = 677.0
+offset_top = 454.0
+offset_right = 972.0
+offset_bottom = 505.0
+theme_override_fonts/normal_font = ExtResource("9_3uxqw")
+theme_override_font_sizes/normal_font_size = 35
+text = "- over capacity
+"
+
+[node name="trans" type="Node" parent="."]
+
+[node name="instruction1" type="RichTextLabel" parent="trans"]
+z_index = 4096
+offset_left = 475.0
+offset_top = 168.0
+offset_right = 664.0
+offset_bottom = 213.0
+theme_override_fonts/normal_font = ExtResource("9_3uxqw")
+theme_override_font_sizes/normal_font_size = 35
+text = "fill the club"
+
+[node name="instruction2" type="RichTextLabel" parent="trans"]
+z_index = 4096
+offset_left = 406.0
+offset_top = 251.0
+offset_right = 715.0
+offset_bottom = 296.0
+theme_override_fonts/normal_font = ExtResource("9_3uxqw")
+theme_override_font_sizes/normal_font_size = 35
+text = "don't go over capacity"
+
+[node name="instruction3" type="RichTextLabel" parent="trans"]
+z_index = 4096
+offset_left = 395.0
+offset_top = 341.0
+offset_right = 751.0
+offset_bottom = 396.0
+theme_override_fonts/normal_font = ExtResource("9_3uxqw")
+theme_override_font_sizes/normal_font_size = 35
+text = "keep your popularity up
+"
+
+[node name="instruction4" type="RichTextLabel" parent="trans"]
+z_index = 4096
+offset_left = 383.0
+offset_top = 422.0
+offset_right = 764.0
+offset_bottom = 462.0
+theme_override_fonts/normal_font = ExtResource("9_3uxqw")
+theme_override_font_sizes/normal_font_size = 35
+text = "press w to let someone in"
